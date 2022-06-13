@@ -12,15 +12,6 @@ const tutorials = [
 ];
 
 
-// console.log(titleCased())
-
-// function titleCased(...str) {
-//   return str.toLowerCase().split(' ').map((word) => {
-//     return word[0].toUpperCase() + word.slice(1)
-//   }).join(' ')
-// }
-
-// console.log(titleCased(tutorials));
 
 
 const titleCased = () => {
@@ -28,7 +19,9 @@ const titleCased = () => {
   
   const convertedSentenceToCaps = tutorials.map((tutorialSentence) => {
     const letter = tutorialSentence.split(' ');
+    // console.log(letter)
     const letterTitle = letter.map((letter) => letter.charAt(0).toUpperCase() + letter.slice(1));
+    // console.log(letterTitle)
     const convertedSentence = letterTitle.join(' ');
     return convertedSentence
   });
