@@ -11,6 +11,32 @@ const tutorials = [
   'what is JSONP?'
 ];
 
+
+// console.log(titleCased())
+
+// function titleCased(...str) {
+//   return str.toLowerCase().split(' ').map((word) => {
+//     return word[0].toUpperCase() + word.slice(1)
+//   }).join(' ')
+// }
+
+// console.log(titleCased(tutorials));
+
+
 const titleCased = () => {
-  return tutorials
+  
+  
+  const convertedSentenceToCaps = tutorials.map((tutorialSentence) => {
+    const letter = tutorialSentence.split(' ');
+    const letterTitle = letter.map((letter) => letter.charAt(0).toUpperCase() + letter.slice(1));
+    const convertedSentence = letterTitle.join(' ');
+    return convertedSentence
+  });
+
+  return convertedSentenceToCaps 
+
+
 }
+
+
+console.log(titleCased());
